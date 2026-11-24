@@ -1,0 +1,104 @@
+{
+  "etapa": "validacion",
+  "split": {
+    "train": [
+      "2026-01",
+      "2026-02"
+    ],
+    "validacion": "2026-03"
+  },
+  "n_train": 1329344,
+  "n_val": 953449,
+  "muestreo": {
+    "n_por_mes_train": 700000,
+    "n_val": 1000000
+  },
+  "resultados": {
+    "baseline_mediana": {
+      "MAE_min": 9.208,
+      "RMSE_min": 14.881,
+      "R2": -0.0592,
+      "MedAE_min": 6.217,
+      "P90_AE_min": 19.4,
+      "MAPE_pct": 72.5,
+      "fit_seg": 0.3
+    },
+    "baseline_lineal": {
+      "MAE_min": 5.578,
+      "RMSE_min": 8.773,
+      "R2": 0.6318,
+      "MedAE_min": 4.029,
+      "P90_AE_min": 10.688,
+      "MAPE_pct": 47.88,
+      "fit_seg": 1.3
+    },
+    "ridge": {
+      "MAE_min": 4.351,
+      "RMSE_min": 6.989,
+      "R2": 0.7664,
+      "MedAE_min": 2.985,
+      "P90_AE_min": 8.942,
+      "MAPE_pct": 32.55,
+      "fit_seg": 6.3
+    },
+    "random_forest": {
+      "MAE_min": 3.496,
+      "RMSE_min": 5.877,
+      "R2": 0.8348,
+      "MedAE_min": 2.268,
+      "P90_AE_min": 7.29,
+      "MAPE_pct": 24.54,
+      "fit_seg": 26.8
+    },
+    "hgb_mae": {
+      "MAE_min": 3.288,
+      "RMSE_min": 5.831,
+      "R2": 0.8374,
+      "MedAE_min": 1.974,
+      "P90_AE_min": 7.045,
+      "MAPE_pct": 20.93,
+      "fit_seg": 62.4
+    },
+    "hgb_mse": {
+      "MAE_min": 3.397,
+      "RMSE_min": 5.731,
+      "R2": 0.8429,
+      "MedAE_min": 2.186,
+      "P90_AE_min": 7.132,
+      "MAPE_pct": 23.53,
+      "fit_seg": 40.2
+    }
+  },
+  "sensibilidad_sin_distancia": {
+    "MAE_min": 3.887,
+    "RMSE_min": 6.64,
+    "R2": 0.7891,
+    "MedAE_min": 2.509,
+    "P90_AE_min": 7.991,
+    "MAPE_pct": 28.39
+  },
+  "mejor_modelo": "hgb_mae",
+  "mejora_mae_vs_baseline_lineal_pct": 41.05,
+  "features": [
+    "trip_distance",
+    "log_distance",
+    "hour_sin",
+    "hour_cos",
+    "is_weekend",
+    "is_holiday",
+    "same_zone",
+    "pu_airport",
+    "do_airport",
+    "unknown_zone",
+    "passenger_count",
+    "ratecode_missing",
+    "pickup_hour",
+    "pickup_dow",
+    "RatecodeID_cat",
+    "VendorID",
+    "PULocationID",
+    "DOLocationID",
+    "route"
+  ],
+  "seed": 42
+}
