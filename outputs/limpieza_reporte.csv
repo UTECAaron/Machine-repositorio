@@ -1,8 +1,0 @@
-regla,elim_train,pct_train,elim_val,pct_val
-pickup fuera del mes del archivo,8,0.001,6,0.001
-duración < 1 min (incl. negativas),30851,2.204,22453,2.245
-duración > 180 min,646,0.046,292,0.029
-distancia <= 0 o faltante,38953,2.782,23655,2.365
-distancia > 100 mi,72,0.005,20,0.002
-velocidad media > 80 mph,126,0.009,125,0.013
-TOTAL (eliminadas | pct = % retenido),70656,94.953,46551,95.345
